@@ -1,10 +1,10 @@
 FROM node:20.9.0-slim
 
 
-WORKDIR /usr/app
+WORKDIR /app
 
 
-COPY . .
+COPY . /app
 
 RUN npm run build
 
