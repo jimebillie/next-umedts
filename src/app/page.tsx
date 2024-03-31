@@ -3,7 +3,7 @@ import LayoutMain from "@/app/component/layout-main";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCartPlus, faCartShopping} from "@fortawesome/free-solid-svg-icons";
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {Navigation, Pagination, Scrollbar, A11y, Autoplay} from 'swiper/modules';
+import {Pagination, Autoplay} from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import {useState} from "react";
 
@@ -60,6 +60,7 @@ export default function Home() {
                         className="mt-[1.3em] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-[4rem] mb-5">
                         {arrayProduct.map((v: any, i: any) => (
                             <div
+                                key={v+i}
                                 className="w-[100%] min-h-[300px] text-zinc-500">
                                 <div
                                     className="w-full h-[200px] bg-zinc-100 border border-zinc-400 flex justify-center items-center">

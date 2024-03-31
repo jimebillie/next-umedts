@@ -1,6 +1,6 @@
 import LayoutMain from "@/app/component/layout-main";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAddressCard, faAward, faIdCardClip, faPhoneVolume} from "@fortawesome/free-solid-svg-icons";
+import {faPhoneVolume} from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutUs() {
     return (
