@@ -2,58 +2,23 @@
 import LayoutMain from "@/app/component/layout-main";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCartPlus, faCartShopping} from "@fortawesome/free-solid-svg-icons";
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {Navigation, Pagination, Scrollbar, A11y, Autoplay} from 'swiper/modules';
-import 'swiper/swiper-bundle.css';
 import {useState} from "react";
+import {faProductHunt} from "@fortawesome/free-brands-svg-icons";
 
 
-export default function Home() {
-    const [arrayProduct, setArrayProduct] = useState<any>(["x", "x", "x", "x", "x", "x", "x", "x"])
+export default function Product() {
+    const [arrayProduct, setArrayProduct] = useState<any>(["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"])
 
     return (
         <>
             <LayoutMain>
-
-                <Swiper
-                    className="cursor-grab border border-zinc-200"
-                    style={{width: "100%"}}
-                    modules={[Pagination, Autoplay,]}
-                    autoplay={{delay: 5000}}
-                    pagination={{clickable: true}}
-                    onSwiper={(swiper) => {
-                    }}
-                    onSlideChange={() => {
-                    }}
-                >
-                    <SwiperSlide>
-                        <img
-                            className="w-[100%]"
-                            src={"/home/slide_test.png"}
-                            alt={""}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img
-                            className="w-[100%]"
-                            src={"/home/slide_test.png"}
-                            alt={""}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img
-                            className="w-[100%]"
-                            src={"/home/slide_test.png"}
-                            alt={""}/>
-                    </SwiperSlide>
-                </Swiper>
-
-
-                <div className="mt-[3em]">
+                <div className="mt-[2em]">
                     <h1 className="font-bold text-3xl text-green-800 flex flex-wrap items-center border-b-2 border-green-900 pb-3">
-                        <FontAwesomeIcon icon={faCartShopping}
+                        <FontAwesomeIcon icon={faProductHunt}
                                          className="text-green-900"
                                          style={{width: "30px", height: "30px", marginRight: "5px"}}
                         />
-                        สินค้าของเรา
+                        สินค้าทั้งหมด
                     </h1>
 
                     <div

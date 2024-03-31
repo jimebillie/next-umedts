@@ -7,7 +7,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <html lang="en">
         <title>umedts.com</title>
         <link rel="icon" href="/logo/logo-green.png"/>
-        <body className="bg-green-800">{children}</body>
+        <body>{children}</body>
         </html>
     )
 }

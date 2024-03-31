@@ -26,7 +26,7 @@ export default function LayoutMain({children}: { children: React.ReactNode }) {
                  *
                  */
             }
-            <div className="flex justify-center min-h-[90vh] bg-zinc-200">
+            <div className="flex justify-center min-h-[90vh] bg-[#ebf7e4]">
                 <div className="w-[90%] md:w-[80%] p-5 bg-white">
                     {children}
                 </div>

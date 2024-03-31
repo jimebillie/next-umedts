@@ -7,7 +7,7 @@ import {faLine, faWeixin} from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
     return (
         <>
-            <div className="flex justify-center py-5 bg-green-800 text-white">
+            <div className="flex justify-center py-5 bg-[#d6f4c4] text-[#347207]">
                 <div className="w-[90%] md:w-[80%]">
                     {
                         /**
@@ -28,12 +28,12 @@ export default function Footer() {
                              */}
                         <div className="">
                             <div className="relative top-[-15px] left-[-15px]">
-                                <Image src={"/logo/logo-green.png"} alt={"logo"} width={100} height={100}/>
+                                <Image src={"/logo/logo-green.png"} alt={"logo"} width={100} height={100} priority={true}/>
                             </div>
                             <div>
-                                <div className="text-2xl p-3 rounded-2xl bg-green-900">
+                                <div className="text-2xl p-3 rounded-2xl text-[#57c209] bg-[#166434]">
                                     บริษัท ยูเมดิคอลเทรดดิ้งแอนด์เซอร์วิส จำกัด
-                                    <div className="mt-[1em] flex flex-wrap text-sm text-gray-200">
+                                    <div className="mt-[1em] flex flex-wrap text-sm text-[#f4ffeb]">
                                         <FontAwesomeIcon icon={faQuoteLeft} style={{
                                             width: "10px",
                                             height: "10px",
