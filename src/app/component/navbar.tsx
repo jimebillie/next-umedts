@@ -72,7 +72,7 @@ export default function Navbar() {
                                     การรับประกัน
                                 </Link>
                                 <Link href={"/contact"}
-                                   className={`ml-1 py-2 px-2 ${pathNow === "/product_warranty" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
+                                   className={`ml-1 py-2 px-2 ${pathNow === "/contact" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
                                     ติดต่อเรา
                                 </Link>
                                 {
