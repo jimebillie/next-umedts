@@ -1,11 +1,11 @@
 FROM node:20.9.0-slim
 
-
 WORKDIR /app
-
 
 COPY . /app
 
-RUN npm run build
+RUN yarn install
 
-CMD ["npm", "start"]
+RUN yarn build
+
+CMD yarn start

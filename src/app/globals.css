@@ -6,3 +6,11 @@
 body {
     font-family: sans-serif;
 }
+.swiper-pagination-bullet{
+    width: 15px !important;
+    height: 15px !important;
+    border:2px solid white!important;
+}
+.swiper-pagination-bullet-active{
+    background-color: #88c75b!important;
+}

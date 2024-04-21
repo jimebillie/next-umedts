@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     const [bergerToggle, setBergerToggle] = useState<number>(0);
+
     function bergerClick() {
         if (bergerToggle === 0) {
             setBergerToggle(1)
@@ -41,22 +42,25 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="flex justify-center bg-[#d6f4c4] drop-shadow-2xl relative z-10">
+            <div className="flex justify-center bg-[#ebffdc] border border-[#ddf1d0] relative z-10">
                 <div className="w-[90%] md:w-[80%]">
                     <div className="flex justify-between items-center">
-                        <Image src="/logo/logo-green.png" alt="logo" width={80} height={80} priority={true}/>
+                        <Link href={"/"}>
+                            <Image src="/logo/logo-green.png" alt="logo" width={80} height={80} priority={true}/>
+                        </Link>
 
                         <button className="md:hidden text-[#367f01] cursor-pointer bg-[#d1ebc1] rounded-[5px] p-2 px-3"
                                 onClick={bergerClick}>
                             <FontAwesomeIcon icon={faBars} className="w-[30px] h-[30px]"/>
                         </button>
 
-                        <div className={`absolute left-0 w-full top-[80px] ${bergerToggle === 0 ? 'hidden' : 'flex'} justify-center ||start md|| md:flex md:static md:justify-end`}>
+                        <div
+                            className={`absolute left-0 w-full top-[80px] ${bergerToggle === 0 ? 'hidden' : 'flex'} justify-center ||start md|| md:flex md:static md:justify-end`}>
                             <div
-                                className={`text-[#367f01] font-semibold relative w-[90%] bg-white flex flex-col items-start left-0 p-5 rounded-b-3xl drop-shadow-2xl ||start md|| md:flex md:bg-[unset] md:flex-row md:items-center md:w-auto md:top-auto md:left-auto md:p-0 md:rounded-b-none md:drop-shadow-none z-10`
+                                className={`text-[#367f01] font-semibold relative w-[95%] bg-white border border-zinc-200 flex flex-col items-start left-0 p-5 rounded-b-3xl drop-shadow-2xl ||start md|| md:border-0 md:flex md:bg-[unset] md:flex-row md:items-center md:w-auto md:top-auto md:left-auto md:p-0 md:rounded-b-none md:drop-shadow-none z-10`
                                 }>
                                 <Link href={"/"}
-                                   className={`ml-1 py-2 px-2 ${pathNow === "/" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
+                                      className={`ml-1 py-2 px-2 ${pathNow === "/" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
                                     หน้าแรก
                                 </Link>
                                 <Link href={"/product"}
@@ -64,15 +68,15 @@ export default function Navbar() {
                                     สินค้าทั้งหมด
                                 </Link>
                                 <Link href={"/aboutus"}
-                                   className={`ml-1 py-2 px-2 ${pathNow === "/aboutus" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
+                                      className={`ml-1 py-2 px-2 ${pathNow === "/aboutus" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
                                     เกี่ยวกับเรา
                                 </Link>
                                 <Link href={"/product_warranty"}
-                                   className={`ml-1 py-2 px-2 ${pathNow === "/product_warranty" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
+                                      className={`ml-1 py-2 px-2 ${pathNow === "/product_warranty" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
                                     การรับประกัน
                                 </Link>
                                 <Link href={"/contact"}
-                                   className={`ml-1 py-2 px-2 ${pathNow === "/contact" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
+                                      className={`ml-1 py-2 px-2 ${pathNow === "/contact" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
                                     ติดต่อเรา
                                 </Link>
                                 {

@@ -1,4 +1,4 @@
-import LayoutMain from "@/app/component/layout-main";
+import LayoutMain from "@/app/layout/layout-main";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAward} from "@fortawesome/free-solid-svg-icons";
 export default function AboutUs() {

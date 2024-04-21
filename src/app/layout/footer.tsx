@@ -7,7 +7,7 @@ import {faLine, faWeixin} from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
     return (
         <>
-            <div className="flex justify-center py-5 bg-[#d6f4c4] text-[#347207]">
+            <div className="flex justify-center py-5 bg-[#ebffdc] text-[#347207] border border-[#ddf1d0]">
                 <div className="w-[90%] md:w-[80%]">
                     {
                         /**
@@ -31,20 +31,10 @@ export default function Footer() {
                                 <Image src={"/logo/logo-green.png"} alt={"logo"} width={100} height={100} priority={true}/>
                             </div>
                             <div>
-                                <div className="text-2xl p-3 rounded-2xl text-[#57c209] bg-[#166434]">
+                                <div className="text-2xl p-3 rounded-2xl text-[#518f24] bg-[#c7ecac] border border-[#badca2]">
                                     บริษัท ยูเมดิคอลเทรดดิ้งแอนด์เซอร์วิส จำกัด
-                                    <div className="mt-[1em] flex flex-wrap text-sm text-[#f4ffeb]">
-                                        <FontAwesomeIcon icon={faQuoteLeft} style={{
-                                            width: "10px",
-                                            height: "10px",
-                                            marginRight: "5px",
-                                        }}/>
+                                    <div className="mt-[0.5em] flex flex-wrap text-sm text-[#5e9733]">
                                         ให้บริการแบบเข้าใจผู้ประกอบการ
-                                        <FontAwesomeIcon icon={faQuoteRight} style={{
-                                            width: "10px",
-                                            height: "10px",
-                                            marginLeft: "5px",
-                                        }}/>
                                     </div>
                                 </div>
                             </div>

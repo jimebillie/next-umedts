@@ -1,11 +1,13 @@
 "use client"
-import LayoutMain from "@/app/component/layout-main";
+import LayoutMain from "@/app/layout/layout-main";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCartPlus, faCartShopping} from "@fortawesome/free-solid-svg-icons";
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {Pagination, Autoplay} from 'swiper/modules';
+import {Pagination, Autoplay, Navigation, A11y} from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
+import 'swiper/css/navigation';
 import {useState} from "react";
+import Item_Product from "@/app/component/item_product";
 
 
 export default function Home() {
@@ -18,7 +20,8 @@ export default function Home() {
                 <Swiper
                     className="cursor-grab border border-zinc-200"
                     style={{width: "100%"}}
-                    modules={[Pagination, Autoplay,]}
+                    modules={[Pagination, Autoplay, Navigation, A11y]}
+                    navigation={false}
                     autoplay={{delay: 5000}}
                     pagination={{clickable: true}}
                     onSwiper={(swiper) => {
@@ -57,33 +60,13 @@ export default function Home() {
                     </h1>
 
                     <div
-                        className="mt-[1.3em] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-[4rem] mb-5">
+                        className="mt-[1.5em] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-[4rem] mb-5">
                         {arrayProduct.map((v: any, i: any) => (
-                            <div
-                                key={v+i}
-                                className="w-[100%] min-h-[300px] text-zinc-500">
-                                <div
-                                    className="w-full h-[200px] bg-zinc-100 border border-zinc-400 flex justify-center items-center">
-                                    รูปสินค้า
-                                </div>
-                                <div className="mt-3">
-                                    <div
-                                        className="break-all leading-[1.5em] overflow-hidden whitespace-nowrap text-ellipsis w-full">
-                                        <b>ชื่อสินค้า Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
-                                            vel.</b>
-                                    </div>
-                                    <div
-                                        className="break-all leading-[1.5em] h-[3em] overflow-hidden whitespace-normal text-ellipsis w-full">
-                                        รายละเอียด Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo,
-                                        quis.
-                                    </div>
-                                    <button
-                                        className="mt-3 bg-green-800 text-white border border-zinc-300 rounded-[20px] w-full p-2 justify-center flex hover:bg-green-700">
-                                        <FontAwesomeIcon icon={faCartPlus} className="mr-2 w-[20px] h-[20px]"/>
-                                        <div>เพิ่มสินค้า</div>
-                                    </button>
-                                </div>
-                            </div>
+                            <Item_Product
+                                key={v + i}
+                                nameProduct={" ชื่อสินค้า Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vel."}
+                                detailProduct={"รายละเอียด Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo,quis."}
+                            />
                         ))}
                     </div>
                 </div>

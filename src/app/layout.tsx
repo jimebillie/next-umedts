@@ -1,13 +1,19 @@
 import "./globals.css";
 import React from "react";
-
+import {Providers} from "@/app/Redux/Provider";
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
-        <title>umedts.com</title>
-        <link rel="icon" href="/logo/logo-green.png"/>
-        <body>{children}</body>
+        <head>
+            <title>umedts</title>
+            <link rel={"icon"} href={"/logo/logo-green.png"}/>
+        </head>
+        <body>
+        <Providers>
+            {children}
+        </Providers>
+        </body>
         </html>
     )
 }

@@ -1,6 +1,8 @@
+"use client"
 import React from "react";
-import Navbar from "@/app/component/navbar";
-import Footer from "@/app/component/footer";
+import Navbar from "@/app/layout/navbar";
+import Footer from "@/app/layout/footer";
+import Basket from "@/app/component/basket";
 
 export default function LayoutMain({children}: { children: React.ReactNode }) {
     return (
@@ -26,8 +28,8 @@ export default function LayoutMain({children}: { children: React.ReactNode }) {
                  *
                  */
             }
-            <div className="flex justify-center min-h-[90vh] bg-[#ebf7e4]">
-                <div className="w-[90%] md:w-[80%] p-5 bg-white">
+            <div className="flex justify-center min-h-[90vh]">
+                <div className="w-[90%] md:w-[80%] py-[50px] bg-white">
                     {children}
                 </div>
             </div>
@@ -42,6 +44,7 @@ export default function LayoutMain({children}: { children: React.ReactNode }) {
                  */
             }
             <Footer/>
+            <Basket/>
         </>
     )
 }
