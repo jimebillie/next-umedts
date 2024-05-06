@@ -1,11 +1,11 @@
-FROM node:20.9.0-slim
+FROM node:20.12.2-slim
 
 WORKDIR /app
 
 COPY . /app
 
-RUN yarn install
+RUN npm install
 
-RUN yarn build
+RUN npm build
 
-CMD yarn start
+CMD npm start

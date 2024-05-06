@@ -4,7 +4,11 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope, faPhoneVolume, faQuoteLeft, faQuoteRight} from "@fortawesome/free-solid-svg-icons";
 import {faLine, faWeixin} from "@fortawesome/free-brands-svg-icons";
 
-export default function Footer() {
+
+interface IFooter {
+    trans: any
+}
+export default function Footer({trans}: IFooter) {
     return (
         <>
             <div className="flex justify-center py-5 bg-[#ebffdc] text-[#347207] border border-[#ddf1d0]">
@@ -28,13 +32,15 @@ export default function Footer() {
                              */}
                         <div className="">
                             <div className="relative top-[-15px] left-[-15px]">
-                                <Image src={"/logo/logo-green.png"} alt={"logo"} width={100} height={100} priority={true}/>
+                                <Image src={"/logo/logo-green.png"} alt={"logo"} width={100} height={100}
+                                       priority={true}/>
                             </div>
                             <div>
-                                <div className="text-2xl p-3 rounded-2xl text-[#518f24] bg-[#c7ecac] border border-[#badca2]">
-                                    บริษัท ยูเมดิคอลเทรดดิ้งแอนด์เซอร์วิส จำกัด
+                                <div
+                                    className="text-2xl p-3 rounded-2xl text-[#518f24] bg-[#c7ecac] border border-[#badca2]">
+                                    {trans.footer.name_company}
                                     <div className="mt-[0.5em] flex flex-wrap text-sm text-[#5e9733]">
-                                        ให้บริการแบบเข้าใจผู้ประกอบการ
+                                        {trans.footer.sub_name_company}
                                     </div>
                                 </div>
                             </div>
@@ -49,17 +55,20 @@ export default function Footer() {
                              */}
                         <div className="">
                             <h3 className="text-3xl underline underline-offset-[10px]">
-                                บริการ
+                                {trans.footer.service}
                             </h3>
                             <div className="mt-[1.3em]">
                                 <div className="my-[1em] flex flex-wrap">
-                                    - บริการที่ 1 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, beatae.
+                                    - 1 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                    beatae.
                                 </div>
                                 <div className="my-[1em] flex flex-wrap">
-                                    - บริการที่ 2 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ut?
+                                    - 2 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
+                                    ut?
                                 </div>
                                 <div className="my-[1em] flex flex-wrap">
-                                    - บริการที่ 3 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, quas.
+                                    - 3 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+                                    quas.
                                 </div>
                             </div>
                         </div>
@@ -73,11 +82,10 @@ export default function Footer() {
                              */}
                         <div className="">
                             <h3 className="text-3xl underline underline-offset-[10px]">
-                                ติดต่อเรา
+                                {trans.contact.contact}
                             </h3>
                             <p className="mt-[1.3em]">
-                                ที่อยู่ : บริษัท ยูเมดิคอลเทรดดิ้งแอนด์เซอร์วิส จำกัด (สำนักงานใหญ่) 69/488 หมู่ที่ 13
-                                ถนนปู่เจ้าสมิงพราย ตำบลบางหัวเสือ อำเภอพระประแดง จังหวัดสมุทรปราการ 10130
+                                {trans.contact.address}
                             </p>
                             <div className="mt-[1.3em]">
                                 <div className="my-[3px] flex flex-wrap">

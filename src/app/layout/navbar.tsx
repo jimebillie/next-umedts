@@ -1,11 +1,13 @@
-"use client"
 import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-export default function Navbar() {
+interface INavbar{
+    trans:any
+}
+export default function Navbar({trans}: INavbar) {
     const [bergerToggle, setBergerToggle] = useState<number>(0);
 
     function bergerClick() {
@@ -39,7 +41,6 @@ export default function Navbar() {
         }
     }, [typeof window !== 'undefined' ? window.location.pathname : null]);
 
-
     return (
         <>
             <div className="flex justify-center bg-[#ebffdc] border border-[#ddf1d0] relative z-10">
@@ -61,23 +62,23 @@ export default function Navbar() {
                                 }>
                                 <Link href={"/"}
                                       className={`ml-1 py-2 px-2 ${pathNow === "/" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
-                                    หน้าแรก
+                                    {trans.navbar.home}
                                 </Link>
                                 <Link href={"/product"}
                                       className={`ml-1 py-2 px-2 ${pathNow === "/product" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
-                                    สินค้าทั้งหมด
+                                    {trans.navbar.products}
                                 </Link>
                                 <Link href={"/aboutus"}
                                       className={`ml-1 py-2 px-2 ${pathNow === "/aboutus" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
-                                    เกี่ยวกับเรา
+                                    {trans.navbar.about_us}
                                 </Link>
                                 <Link href={"/product_warranty"}
                                       className={`ml-1 py-2 px-2 ${pathNow === "/product_warranty" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
-                                    การรับประกัน
+                                    {trans.navbar.warranty}
                                 </Link>
                                 <Link href={"/contact"}
                                       className={`ml-1 py-2 px-2 ${pathNow === "/contact" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>
-                                    ติดต่อเรา
+                                    {trans.navbar.contact}
                                 </Link>
                                 {
                                     /**
@@ -89,12 +90,12 @@ export default function Navbar() {
                                      */
                                 }
                                 <div className="px-2 mt-3 sm:mt-0 flex items-center justify-center">
-                                    <a className="mx-1 border-[2px] border-[white]" href="#">
+                                    <a className="mx-1 border-[2px] border-[white]" href="/change/lang/th">
                                         <img
                                             src={"https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg"}
                                             alt={"th"} style={{width: "20px", height: "13px"}}/>
                                     </a>
-                                    <a className="mx-1 border-[2px] border-[white]" href="#">
+                                    <a className="mx-1 border-[2px] border-[white]" href="/change/lang/en">
                                         <img
                                             src={"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1600px-Flag_of_the_United_Kingdom.svg.png?20190917170937"}
                                             alt={"th"} style={{width: "20px", height: "13px"}}/>

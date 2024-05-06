@@ -2,9 +2,9 @@
 import React from "react";
 import Navbar from "@/app/layout/navbar";
 import Footer from "@/app/layout/footer";
-import Basket from "@/app/component/basket";
+import {ComponentBasket} from "@/app/component/component_gateway";
 
-export default function LayoutMain({children}: { children: React.ReactNode }) {
+export default function LayoutMain({children, trans}: { children: React.ReactNode,trans:any}) {
     return (
         <>
             {
@@ -17,7 +17,7 @@ export default function LayoutMain({children}: { children: React.ReactNode }) {
                  *
                  */
             }
-            <Navbar/>
+            <Navbar trans={trans}/>
             {
 
                 /**
@@ -43,8 +43,8 @@ export default function LayoutMain({children}: { children: React.ReactNode }) {
                  *
                  */
             }
-            <Footer/>
-            <Basket/>
+            <Footer trans={trans}/>
+            <ComponentBasket trans={trans}/>
         </>
     )
 }
