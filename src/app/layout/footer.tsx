@@ -31,8 +31,8 @@ export default function Footer({trans}: IFooter) {
                              *
                              */}
                         <div className="">
-                            <div className="relative top-[-15px] left-[-15px]">
-                                <Image src={"/logo/logo-green.png"} alt={"logo"} width={100} height={100}
+                            <div className="relative top-[-15px] left-[0px]">
+                                <Image src={"/logo/logo-green.webp"} alt={"logo"} width={70} height={70}
                                        priority={true}/>
                             </div>
                             <div>
