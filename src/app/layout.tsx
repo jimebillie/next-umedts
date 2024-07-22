@@ -8,7 +8,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <html lang={current_lang()}>
         <head>
             <title>umedts</title>
-            <link rel={"icon"} href={"/logo/logo-green.png"}/>
+            <link rel={"icon"} href={"/logo/logo-green.webp"}/>
         </head>
         <body>
         <Providers>

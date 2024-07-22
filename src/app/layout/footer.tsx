@@ -11,7 +11,7 @@ interface IFooter {
 export default function Footer({trans}: IFooter) {
     return (
         <>
-            <div className="flex justify-center py-5 bg-[#ebffdc] text-[#347207] border border-[#ddf1d0]">
+            <div className="flex justify-center py-5 bg-[#f9f9f9] text-[#347207] border border-[#e4e4e7]">
                 <div className="w-[90%] md:w-[80%]">
                     {
                         /**
@@ -31,15 +31,15 @@ export default function Footer({trans}: IFooter) {
                              *
                              */}
                         <div className="">
-                            <div className="relative top-[-15px] left-[0px]">
+                            <div className="relative left-[0px]">
                                 <Image src={"/logo/logo-green.webp"} alt={"logo"} width={70} height={70}
                                        priority={true}/>
                             </div>
                             <div>
                                 <div
-                                    className="text-2xl p-3 rounded-2xl text-[#518f24] bg-[#c7ecac] border border-[#badca2]">
+                                    className="mt-3 text-2xl p-3 rounded-2xl text-[#ffffff] bg-gradient-to-r from-[#073e72] to-[#159783] border border-[#badca2]">
                                     {trans.footer.name_company}
-                                    <div className="mt-[0.5em] flex flex-wrap text-sm text-[#5e9733]">
+                                    <div className="mt-[0.5em] flex flex-wrap text-sm text-[#d5d5d5]">
                                         {trans.footer.sub_name_company}
                                     </div>
                                 </div>

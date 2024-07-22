@@ -43,20 +43,20 @@ export default function Navbar({ trans }: INavbar) {
 
     return (
         <>
-            <div className="flex justify-center bg-[#ebffdc] border border-[#ddf1d0] relative z-10">
+            <div className="flex justify-center bg-[#f9f9f9] border border-[#e4e4e7] shadow-sm relative z-10">
                 <div className="w-[90%] md:w-[80%]">
                     <div className="flex justify-between items-center py-2">
                         <Link href={"/"}>
-                            <Image src="/logo/logo-green.webp" alt="logo" width={50} height={50} priority={true} />
+                            <Image src="/logo/logo-green.webp" alt="logo" width={40} height={40} priority={true} />
                         </Link>
 
-                        <button className="md:hidden text-[#367f01] cursor-pointer bg-[#d1ebc1] rounded-[5px] p-2 px-3"
+                        <button className="md:hidden text-[#3976ac] cursor-pointer bg-[#dddddd] rounded-[5px] p-2 px-3"
                             onClick={bergerClick}>
                             <FontAwesomeIcon icon={faBars} className="w-[30px] h-[30px]" />
                         </button>
 
                         <div
-                            className={`absolute left-0 w-full top-[80px] ${bergerToggle === 0 ? 'hidden' : 'flex'} justify-center ||start md|| md:flex md:static md:justify-end`}>
+                            className={`absolute left-0 w-full top-[66.5px] ${bergerToggle === 0 ? 'hidden' : 'flex'} justify-center ||start md|| md:flex md:static md:justify-end`}>
                             <div
                                 className={`text-[#367f01] font-semibold relative w-[95%] bg-white border border-zinc-200 flex flex-col items-start left-0 p-5 rounded-b-3xl drop-shadow-2xl ||start md|| md:border-0 md:flex md:bg-[unset] md:flex-row md:items-center md:w-auto md:top-auto md:left-auto md:p-0 md:rounded-b-none md:drop-shadow-none z-10`
                                 }>

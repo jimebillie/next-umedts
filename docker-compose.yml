@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  app:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Expose port 3000 on the host and map it to port 3000 on the container
