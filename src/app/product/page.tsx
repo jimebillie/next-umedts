@@ -12,9 +12,9 @@ export default function Product() {
         <>
             <LayoutMain trans={get_lang()}>
                 <div className="mt-[2em]">
-                    <h1 className="font-bold text-3xl text-green-800 flex flex-wrap items-center border-b-2 border-green-900 pb-3">
+                    <h1 className="font-bold text-3xl text-[#486178] flex flex-wrap items-center border-b-2 border-[#486178] pb-3">
                         <FontAwesomeIcon icon={faProductHunt}
-                                         className="text-green-900"
+                                         className=""
                                          style={{width: "30px", height: "30px", marginRight: "5px"}}
                         />
                         {trans.products.products}

@@ -2,9 +2,10 @@ version: '3.1'
 
 services:
   app:
+    container_name: client-umedts
     restart: always
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000" # Expose port 3000 on the host and map it to port 3000 on the container
+      - "3000:3000"

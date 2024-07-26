@@ -32,7 +32,7 @@ export default function Item_Product({nameProduct, detailProduct, lang}: Interfa
                     {detailProduct}
                 </div>
                 <button
-                    className="mt-3 bg-[#72aa4a] text-white border border-zinc-300 rounded-[20px] w-full p-2 justify-center flex hover:bg-[#7cb852]"
+                    className="mt-3 bg-gradient-to-br from-[#159783] to-[#073e72] text-white border border-zinc-300 rounded-[20px] w-full p-2 justify-center flex"
                     onClick={() => dispatch(increment())}
                 >
                     <FontAwesomeIcon icon={faCartPlus} className="mr-2 w-[20px] h-[20px]"/>

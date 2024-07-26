@@ -58,7 +58,7 @@ export default function Navbar({ trans }: INavbar) {
                         <div
                             className={`absolute left-0 w-full top-[66.5px] ${bergerToggle === 0 ? 'hidden' : 'flex'} justify-center ||start md|| md:flex md:static md:justify-end`}>
                             <div
-                                className={`text-[#367f01] font-semibold relative w-[95%] bg-white border border-zinc-200 flex flex-col items-start left-0 p-5 rounded-b-3xl drop-shadow-2xl ||start md|| md:border-0 md:flex md:bg-[unset] md:flex-row md:items-center md:w-auto md:top-auto md:left-auto md:p-0 md:rounded-b-none md:drop-shadow-none z-10`
+                                className={`text-[#486178] font-semibold relative w-[95%] bg-white border border-zinc-200 flex flex-col items-start left-0 p-5 rounded-b-3xl drop-shadow-2xl ||start md|| md:border-0 md:flex md:bg-[unset] md:flex-row md:items-center md:w-auto md:top-auto md:left-auto md:p-0 md:rounded-b-none md:drop-shadow-none z-10`
                                 }>
                                 <Link href={"/"}
                                     className={`ml-1 py-2 px-2 ${pathNow === "/" ? 'underline underline-offset-[5px] decoration-[2px]' : ''} hover:underline hover:underline-offset-[5px] hover:decoration-[2px]`}>

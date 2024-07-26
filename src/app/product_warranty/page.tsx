@@ -8,9 +8,9 @@ export default function AboutUs() {
         <>
             <LayoutMain trans={trans}>
                 <div className="mt-[2em]">
-                    <h1 className="font-bold text-3xl text-green-800 flex flex-wrap items-center border-b-2 border-green-900 pb-3">
+                <h1 className="font-bold text-3xl text-[#486178] flex flex-wrap items-center border-b-2 border-[#486178] pb-3">
                         <FontAwesomeIcon icon={faAward}
-                            className="text-green-900"
+                            className=""
                             style={{ width: "30px", height: "30px", marginRight: "5px" }}
                         />
                         {trans.warranty.warranty}

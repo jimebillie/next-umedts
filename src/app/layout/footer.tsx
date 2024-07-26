@@ -11,7 +11,7 @@ interface IFooter {
 export default function Footer({trans}: IFooter) {
     return (
         <>
-            <div className="flex justify-center py-5 bg-[#f9f9f9] text-[#347207] border border-[#e4e4e7]">
+            <div className="flex justify-center py-5 bg-[#f9f9f9] text-[#33947d] border border-[#e4e4e7]">
                 <div className="w-[90%] md:w-[80%]">
                     {
                         /**
@@ -53,8 +53,8 @@ export default function Footer({trans}: IFooter) {
                              * @desc -
                              *
                              */}
-                        <div className="">
-                            <h3 className="text-3xl underline underline-offset-[10px]">
+                        <div className="text-[#486178]">
+                            <h3 className="text-3xl underline underline-offset-[10px] font-semibold">
                                 {trans.footer.service}
                             </h3>
                             <div className="mt-[1.3em]">
@@ -80,14 +80,14 @@ export default function Footer({trans}: IFooter) {
                              * @desc -
                              *
                              */}
-                        <div className="">
-                            <h3 className="text-3xl underline underline-offset-[10px]">
+                        <div className="text-[#486178]">
+                            <h3 className="text-3xl underline underline-offset-[10px] font-semibold">
                                 {trans.contact.contact}
                             </h3>
                             <p className="mt-[1.3em]">
                                 {trans.contact.address}
                             </p>
-                            <div className="mt-[1.3em]">
+                            <div className="mt-[1.3em] ">
                                 <div className="my-[3px] flex flex-wrap">
                                     <FontAwesomeIcon icon={faPhoneVolume} style={{width: "20px", height: "20px"}}/>
                                     <a className="ml-2" href="tel:021143652">02-114-3652</a>
